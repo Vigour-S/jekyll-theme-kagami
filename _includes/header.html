@@ -1,5 +1,9 @@
 <header class="post-header">
+  {% if page.lang == 'en' %}
   <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+  {% else %}
+  <a class="site-title" href="{{ "/index.zh.html" | relative_url }}">{{ site.title | escape }}</a>
+  {% endif %}
   <h1 class="post-title baseline-fix" itemprop="name headline">{{ page.title | escape | replace: "​", "<wbr>" }}</h1>
 </header>
 
